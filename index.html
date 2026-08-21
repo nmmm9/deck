@@ -544,42 +544,44 @@
     <div style="flex:1; border-left:1px solid var(--line); padding:0 2em"><p class="cap">최초 탐지 시점</p><div style="font-size:2.3em; font-weight:800; color:var(--blue)">중앙 20초</div><p style="font-size:.76em; color:var(--sub)">피싱 통화 절반이 2분 14초에 끝나는데, 그 창의 앞 15% 지점에서 탐지</p></div>
     <div style="flex:1; border-left:1px solid var(--line); padding-left:2em"><p class="cap">60초 이내 탐지</p><div style="font-size:2.3em; font-weight:800; color:var(--blue)">90.2%</div><p style="font-size:.76em; color:var(--sub)">요구 단계 도달 전 개입 가능</p></div>
   </div>
-  <svg viewBox="0 0 1160 300" style="width:100%; height:auto; display:block; margin-top:1.4em" font-family="inherit">
-    <text x="4" y="20" font-size="14.5" font-weight="700" fill="#0f1b33">피싱 전화 한 통의 타임라인 — 멈칫이 개입하는 위치</text>
+  <svg viewBox="0 0 1160 305" style="width:100%; height:auto; display:block; margin-top:1.4em" font-family="inherit">
+    <text x="4" y="20" font-size="14.5" font-weight="700" fill="#0f1b33">같은 출발선에서 출발하면 — 누가 먼저 끝내는가</text>
 
-    <!-- 통화 바 -->
-    <rect x="60.0" y="118" width="1090.0" height="52" rx="10" fill="#eef2fa"/>
-    <rect x="60.0" y="118" width="145.3" height="52" rx="10" fill="#2563eb"/>
-    <rect x="161.7" y="118" width="334.3" height="52" fill="#7fa3ee"/>
-    <rect x="496.0" y="118" width="537.7" height="52" fill="#dbe6f8"/>
+    <!-- 기준선: 멈칫 완주 시점 -->
+    <line x1="282.0" y1="50" x2="282.0" y2="230" stroke="#b6c2d4" stroke-width="1.6" stroke-dasharray="5 5"/>
 
-    <!-- 구간 안 라벨 -->
-    <text x="132.65" y="149" text-anchor="middle" font-size="13.5" font-weight="800" fill="#fff">~20초</text>
-    <text x="350.65" y="149" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e3a8a">~60초</text>
-    <text x="764.85" y="149" text-anchor="middle" font-size="13" font-weight="600" fill="#94a3b8">이미 잡힌 뒤의 시간</text>
+    <!-- 레인 1: 멈칫 -->
+    <text x="138" y="93" text-anchor="end" font-size="14" font-weight="700" fill="#1e3a8a">멈칫 탐지</text>
+    <rect x="150.0" y="64" width="990.0" height="46" rx="9" fill="#f1f5fb"/>
+    <rect x="150.0" y="64" width="132.0" height="46" rx="9" fill="#2563eb"/>
+    <text x="316.0" y="86" font-size="14.5" font-weight="800" fill="#1e3a8a">20초 — 완주 (절반 탐지)</text>
+    <text x="316.0" y="105" font-size="12.5" fill="#5b6b85">60초면 90.2%까지 탐지 끝</text>
+    <text x="284.0" y="94" font-size="22">🏁</text>
 
-    <!-- 위 주석: 탐지 마커 -->
-    <line x1="205.3" y1="72" x2="205.3" y2="118" stroke="#2563eb" stroke-width="2"/>
-    <circle cx="205.3" cy="72" r="4.5" fill="#2563eb"/>
-    <text x="215.3" y="66" font-size="13.5" font-weight="800" fill="#1e3a8a">중앙 20초 — 절반을 여기서 탐지</text>
+    <!-- 레인 2: 사기 -->
+    <text x="138" y="197" text-anchor="end" font-size="14" font-weight="700" fill="#475569">사기 진행</text>
+    <rect x="150.0" y="168" width="990.0" height="46" rx="9" fill="#f1f5fb"/>
+    <rect x="150.0" y="168" width="884.4000000000001" height="46" rx="9" fill="#cbd5e1"/>
+    <line x1="447.0" y1="173" x2="447.0" y2="209" stroke="#fff" stroke-width="2"/>
+    <line x1="810.0" y1="173" x2="810.0" y2="209" stroke="#fff" stroke-width="2"/>
+    <text x="298.5" y="196" text-anchor="middle" font-size="12.5" font-weight="600" fill="#475569">신뢰 구축</text>
+    <text x="628.5" y="196" text-anchor="middle" font-size="12.5" font-weight="600" fill="#475569">본론·압박</text>
+    <text x="922.2" y="196" text-anchor="middle" font-size="12.5" font-weight="600" fill="#475569">요구</text>
+    <circle cx="1034.4" cy="191.0" r="6" fill="#dc2626" stroke="#fff" stroke-width="2"/>
+    <text x="1022.4000000000001" y="158" text-anchor="end" font-size="13" font-weight="700" fill="#dc2626">134초 — 피해(송금) 도달</text>
 
-    <line x1="496.0" y1="96" x2="496.0" y2="118" stroke="#7fa3ee" stroke-width="2"/>
-    <circle cx="496.0" cy="96" r="4.5" fill="#7fa3ee"/>
-    <text x="506.0" y="100" font-size="13.5" font-weight="700" fill="#1e3a8a">60초 — 여기까지 90.2% 탐지</text>
-
-    <!-- 피해 지점 -->
-    <line x1="1033.7" y1="104" x2="1033.7" y2="184" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 5"/>
-    <text x="1033.7" y="206" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">2분 14초 — 피해 통화 절반 종료</text>
+    <!-- 기준선 주석 -->
+    <text x="292.0" y="158" font-size="13" font-weight="700" fill="#475569">이 시점, 사기는 아직 인사말 단계</text>
 
     <!-- 축 -->
-    <text x="60.0" y="206" text-anchor="middle" font-size="12.5" fill="#94a3b8">0초</text>
-    <text x="278.0" y="206" text-anchor="middle" font-size="12.5" fill="#94a3b8">30초</text>
-    <text x="496.0" y="206" text-anchor="middle" font-size="12.5" fill="#94a3b8">1분</text>
-    <text x="714.0" y="206" text-anchor="middle" font-size="12.5" fill="#94a3b8">1분 30초</text>
-    <text x="932.0" y="206" text-anchor="middle" font-size="12.5" fill="#94a3b8">2분</text>
+    <text x="150.0" y="248" text-anchor="middle" font-size="12.5" fill="#94a3b8">0초</text>
+    <text x="348.0" y="248" text-anchor="middle" font-size="12.5" fill="#94a3b8">30초</text>
+    <text x="546.0" y="248" text-anchor="middle" font-size="12.5" fill="#94a3b8">1분</text>
+    <text x="744.0" y="248" text-anchor="middle" font-size="12.5" fill="#94a3b8">1분 30초</text>
+    <text x="942.0" y="248" text-anchor="middle" font-size="12.5" fill="#94a3b8">2분</text>
+    <text x="1140.0" y="248" text-anchor="middle" font-size="12.5" fill="#94a3b8">2분 30초</text>
 
-    <!-- 하단 결론 -->
-    <text x="580" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#0f1b33">요구 단계(이체·인출 지시)가 나오기 전에, 이미 잡혀 있습니다</text>
+    <text x="580" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#0f1b33">사기가 본론을 꺼내기 전에, 경주는 끝나 있습니다 — <tspan fill="#2563eb">6.7배</tspan> 먼저 도착</text>
   </svg>
   <p class="cap" style="margin-top:.6em">유형별 탐지율: 수사기관 사칭 99% · 가족·지인 사칭 100% · 대출 사기 95%(키워드 룰 0% → 문맥 판정) · 택배·기관 100% · 기타·변종 82%(파인튜닝 보강 중) · 기술 지표 달성: ①정확도 프론티어급 이상 → 95.2% ②골든타임 내 개입 → 중앙 20초·60초 내 90.2% ③8GB 보급형 구동 → 상시 1.7GB ④STT 결합 엔드투엔드 탐지 93~95% (예상 — WER 20% 주입에서 98.3% 유지가 하한 근거, 발표 전 실측 교체)</p>
 </div>
