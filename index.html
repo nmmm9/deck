@@ -270,7 +270,7 @@
   </svg>
   <div style="display:flex; gap:3em; margin-top:.5em">
     <div style="flex:1; border-top:1px solid var(--line); padding-top:.9em"><b style="font-size:1em">부모님에겐 — 감시가 아니라 안심</b><p style="font-size:.92em; color:var(--sub); margin-top:.35em; line-height:1.5">설치 시 명시 동의 · 언제든 끌 수 있음 · 전송되는 건 대화 내용이 아니라 위험 신호뿐</p></div>
-    <div style="flex:1; border-top:1px solid var(--line); padding-top:.9em"><b style="font-size:1em">자녀에겐 — 위험할 때만 알림</b><p style="font-size:.92em; color:var(--sub); margin-top:.35em; line-height:1.5">평소엔 아무것도 안 보냄 · 위험 감지 시 유형·위험도만 전달 — 대화 내용은 자녀도 볼 수 없음</p></div>
+    <div style="flex:1; border-top:1px solid var(--line); padding-top:.9em"><b style="font-size:1em">자녀에겐 — 위험할 때만 알림</b><p style="font-size:.92em; color:var(--sub); margin-top:.35em; line-height:1.5">평소엔 아무것도 안 보냄 · 위험 감지 시 유형·위험도만 전달</p></div>
   </div>
 </div>
   
@@ -337,11 +337,11 @@
     <div style="flex:1; display:flex; flex-direction:column; gap:1em; justify-content:center">
       <div style="border:1px solid var(--line); border-radius:12px; padding:1.05em 1.2em; background:#fbfcfe">
         <b style="font-size:.98em">01 · 왜 필요한가</b>
-        <p style="font-size:.9em; color:var(--sub); margin-top:.4em; line-height:1.6">몇 초 분량의 음성만 있으면 가족 목소리를 복제할 수 있습니다. <em>귀로는 구분되지 않아</em>, 기계로 먼저 걸러야 합니다</p>
+        <p style="font-size:.9em; color:var(--sub); margin-top:.4em; line-height:1.6">몇 초 분량의 음성만 있으면 가족 목소리를 복제할 수 있습니다.<br><em>귀로는 구분되지 않아</em>, 기계로 먼저 걸러야 합니다</p>
       </div>
       <div style="border:1px solid var(--line); border-radius:12px; padding:1.05em 1.2em; background:#fbfcfe">
         <b style="font-size:.98em">02 · 왜 '가산 전용'인가</b>
-        <p style="font-size:.9em; color:var(--sub); margin-top:.4em; line-height:1.6"><em>실제 은행·기관도 안내 전화에 AI 합성음을 씁니다.</em> 합성음이라고 사기로 단정할 수 없다는 뜻입니다. 한국어 실환경 성능도 아직 검증 전이라(영어 벤치마크 기준), 차단 판단에서는 빼고 <b>위험도 가산에만</b> 씁니다. 멀쩡한 안내 전화를 끊는 일이 없도록 설계했습니다</p>
+        <p style="font-size:.9em; color:var(--sub); margin-top:.4em; line-height:1.6"><em>실제 은행·기관도 안내 전화에 AI 합성음을 씁니다.</em> 합성음이라고 사기로 단정할 수 없다는 뜻입니다. 그래서 차단 판단에서는 빼고 <b>위험도 가산에만</b> 씁니다. 멀쩡한 안내 전화를 끊는 일이 없도록 설계했습니다</p>
       </div>
     </div>
     <div style="flex:1.05; border:1.5px solid var(--blue); border-radius:14px; padding:1.3em 1.5em; background:#f6f9ff; display:flex; align-items:center; justify-content:center; gap:2.2em">
@@ -366,9 +366,9 @@
 <!-- 7b 관문2 대화 판정 -->
 <section class="slide">
   <span class="kick">기술성 · 대화 판정</span>
-  <h2>대화 판정 — 모델 2단 구성 (평소엔 경량, 필요할 때 정밀)</h2>
+  <h2>대화 판정 — 모델 2단 구성</h2>
   <div class="vfill">
-  <p class="lead" style="margin-top:.8em"><em>경량 상시 모델</em> + 의심 신호가 잡히면 깨어나는 <em>고성능 정밀 모델</em> — 8GB 보급형 폰에서 프론티어급 정밀도를 내는 구조 <span class="cap">(현재 인스턴스: Gemma E2B·E4B, 구글 공식 4비트)</span></p>
+  <p class="lead" style="margin-top:.8em"><em>경량 상시 모델</em> + 의심 신호가 잡히면 깨어나는 <em>고성능 정밀 모델</em> — 사양이 넉넉하지 않은 부모님 기기에서도 프론티어급 정밀도를 내는 구조</p>
   <svg viewBox="0 0 1160 210" style="width:100%; height:auto; display:block" font-family="inherit">
     <defs>
       <marker id="ar8" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker>
@@ -398,12 +398,15 @@
     <rect x="952" y="50" width="204" height="110" rx="8" fill="#fff" stroke="#b6c2d4" stroke-width="1.5"/>
     <text x="1054" y="92" text-anchor="middle" font-size="16" font-weight="700" fill="#0f1b33">위험도 판정</text>
     <text x="1054" y="117" text-anchor="middle" font-size="13" fill="#64748b">0–100 누적 점수</text>
-    <text x="1054" y="139" text-anchor="middle" font-size="13" fill="#64748b">경고 60 · 잠금 80</text>
   </svg>
-  <div style="display:flex; gap:2em">
-    <div style="flex:1; border:1px solid var(--line); border-radius:12px; padding:1.35em 1.4em; background:#fbfcfe"><b style="font-size:.98em">정밀 모델만 상시 가동</b><p style="font-size:.9em; color:var(--sub); margin-top:.5em; line-height:1.6">통화 내내 E4B를 켜두는 방식. 정확도는 가장 높지만, 매 10초마다 정밀 모델을 돌려서 <em>연산량이 그대로 쌓입니다</em></p></div>
-    <div class="em-box" style="flex:1; padding:1.35em 1.4em"><b style="font-size:.98em; color:var(--deep)">웨이크업 방식 — 같은 정확도, 연산 84% 절감</b><p style="font-size:.9em; color:var(--sub); margin-top:.5em; line-height:1.6">평소엔 경량 모델만 돌고, 필요할 때만 정밀 모델이 깨어납니다. 깨어나면 그동안 쌓인 대화를 처음부터 다시 심사하기 때문에 <em>탐지 성능은 상시 가동과 동일</em>합니다. 줄어드는 건 연산량뿐이라, 그만큼 <em>배터리 소모와 발열이 줄어듭니다</em></p></div>
-  </div>
+  <table style="margin-top:1.2em">
+    <tr><th style="width:34%">&nbsp;</th><th style="text-align:right">정밀 모델 상시 가동</th><th style="text-align:right">웨이크업 방식</th></tr>
+    <tr class="hl"><td class="l">탐지율</td><td>95.2%</td><td>95.2% — 동일</td></tr>
+    <tr><td class="l">상시 점유 메모리</td><td>3.2GB</td><td>1.7GB</td></tr>
+    <tr><td class="l">연산량</td><td>100</td><td>16 — 84% 절감</td></tr>
+    <tr><td class="l">배터리 · 발열</td><td>부담이 큼</td><td>여유</td></tr>
+  </table>
+  <p class="cap" style="margin-top:.8em">정밀 모델을 필요할 때만 깨우는 방식으로, 탐지 성능은 그대로 두고 연산만 줄였습니다.</p>
 </div>
   
 </section>
@@ -416,7 +419,7 @@
   <div class="ncols" style="margin-top:1.8em">
     <div class="ncol frag" data-frag="1"><span class="no">01</span><b class="t">속도</b>
       <div class="num">8~13<small>초 — 클라우드 응답까지</small></div>
-      <p>API 응답이 10초 판정 주기를 넘겨서 개입할 시점을 놓칩니다. 온디바이스 추론은 조각당 1초 미만입니다</p></div>
+      <p>API 응답이 10초 판정 주기를 넘겨서 개입할 시점을 놓칩니다. 온디바이스 추론은 조각당 1초 미만입니다</p></div>
     <div class="ncol frag" data-frag="2"><span class="no">02</span><b class="t">비용</b>
       <div class="num">수백억<small>원 — 이용자 100만 명 기준 연간</small></div>
       <p>누적 재판정 구조 = 통화당 토큰 제곱 증가 → 이용자 100만 명 · 월 200분 기준 API 비용 연 수백억 원대(프론티어 단가 $2~5/1M 토큰, 2026.7 공시가) — 무료 서비스 성립 불가</p></div>
@@ -427,7 +430,7 @@
 <div class="fxstack">
     <div class="fx" data-frag="1">
     <svg viewBox="0 0 1160 168" style="width:100%; height:auto; display:block" font-family="inherit">
-      <text x="4" y="18" font-size="14" font-weight="700" fill="#0f1b33">같은 10초 청크를 판정하는 데 걸리는 시간</text>
+      <text x="4" y="18" font-size="14" font-weight="700" fill="#0f1b33">대화 문맥을 한 번 판정하는 데 걸리는 시간</text>
       <line x1="150" y1="140" x2="1100" y2="140" stroke="#dde5f1" stroke-width="1.5"/>
       <text x="150" y="160" text-anchor="middle" font-size="12" fill="#94a3b8">0초</text>
       <text x="489" y="160" text-anchor="middle" font-size="12" fill="#94a3b8">5초</text>
@@ -585,7 +588,7 @@
 
     <text x="580" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#0f1b33">사기가 본론을 꺼내기 전에 탐지가 끝납니다 — <tspan fill="#2563eb">6.7배</tspan> 먼저 도착</text>
   </svg>
-  <p class="cap" style="margin-top:.6em; line-height:1.65">유형별 탐지율: 수사기관 사칭 99% · 가족·지인 사칭 100% · 대출 사기 95%(키워드 룰 0% → 문맥 판정) · 택배·기관 100% · 기타·변종 82%(파인튜닝 보강 중). 목표로 잡은 기술 지표는 모두 달성했습니다 — 정확도 95.2%로 프론티어급, 개입 시점 중앙 20초·60초 내 90.2%, 메모리는 보급형 폰에서 상시 1.7GB. STT를 결합한 엔드투엔드 탐지는 93~95%로 보고 있으며, 전사 오류 20% 조건에서 98.3%를 유지한 것이 하한 근거입니다. 발표 전 실측으로 교체합니다.</p>
+  <p class="cap" style="margin-top:.6em; line-height:1.65">유형별 탐지율: 수사기관 사칭 99% · 가족·지인 사칭 100% · 대출 사기 95%(키워드 룰 0% → 문맥 판정) · 택배·기관 100% · 기타·변종 82%(파인튜닝 보강 중). 목표로 잡은 기술 지표는 모두 달성했습니다 — 정확도 95.2%로 프론티어급, 개입 시점 중앙 20초·60초 내 90.2%, 메모리는 부모님 기기 기준 상시 1.7GB. STT를 결합한 엔드투엔드 탐지는 93~95%로 보고 있으며, 전사 오류 20% 조건에서 98.3%를 유지한 것이 하한 근거입니다. 발표 전 실측으로 교체합니다.</p>
 </div>
   
 </section>
